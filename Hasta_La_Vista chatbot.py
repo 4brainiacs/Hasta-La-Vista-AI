@@ -38,16 +38,17 @@ with open("chatbot1.txt", "r") as f1, open("chatbot2.txt", "r") as f2:
     chatbot2_initial_message = f2.read().strip()
 
 conversation_topic = (
-    "Discuss the benefits and challenges of construction equipment and "
-    "home renovation projects. Also, discuss the key aspects of a "
+    "Discuss the benefits and challenges of (any topic you want) "
+    "Also, discuss the key aspects of a "
     "well-written article and give practical tips to improve writing."
 )
 messages_history = [
     {
         "role": "system",
         "content": (
-            "You are two chatbots having a conversation about construction equipment and home renovation projects. "
-            "Your goal is to discuss the benefits and challenges of construction tools and equipment hire. "
+            "You are two chatbots having a conversation about (remove the brackets and add the topic you want the chatbots to discuss and write the article. 
+            Don't forget that in Python is a limit of characters per line before you get a warning). "
+            "Your goal is to discuss the benefits and challenges of (remove the brackets and add the goal you want to be accomplished by the chatbots). "
             f"{conversation_topic}"
         ),
     },
